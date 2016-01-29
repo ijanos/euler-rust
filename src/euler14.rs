@@ -3,11 +3,11 @@ fn collatz_length(a: u32) -> u32 {
     let mut length = 1;
     let mut n: u64 = a as u64;
     while n != 1 {
-        if n % 2 == 0 {
-            n  /= 2;
+        n = if n % 2 == 0 {
+            n  / 2
         } else {
-            n = 3 * n + 1;
-        }
+            3 * n + 1
+        };
         length += 1;
     }
     length
