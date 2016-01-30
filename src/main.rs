@@ -1,3 +1,4 @@
+extern crate num;
 use std::env;
 
 mod euler1;
@@ -13,6 +14,7 @@ mod euler10;
 mod euler12;
 mod euler14;
 mod euler15;
+mod euler20;
 
 fn main() {
     let args = env::args().collect::<Vec<_>>();
@@ -33,6 +35,7 @@ fn main() {
             "12" => euler12::main(),
             "14" => euler14::main(),
             "15" => euler15::main(),
+            "20" => euler20::main(),
             _ => println!("Hasn't solved yet")
         }
     }
