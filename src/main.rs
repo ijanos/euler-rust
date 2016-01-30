@@ -10,6 +10,7 @@ mod euler7;
 mod euler8;
 mod euler9;
 mod euler10;
+mod euler12;
 mod euler14;
 
 fn main() {
@@ -28,6 +29,7 @@ fn main() {
             "8" => euler8::main(),
             "9" => euler9::main(),
             "10" => euler10::main(),
+            "12" => euler12::main(),
             "14" => euler14::main(),
             _ => println!("Hasn't solved yet")
         }
