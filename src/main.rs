@@ -12,6 +12,7 @@ mod euler9;
 mod euler10;
 mod euler12;
 mod euler14;
+mod euler15;
 
 fn main() {
     let args = env::args().collect::<Vec<_>>();
@@ -31,6 +32,7 @@ fn main() {
             "10" => euler10::main(),
             "12" => euler12::main(),
             "14" => euler14::main(),
+            "15" => euler15::main(),
             _ => println!("Hasn't solved yet")
         }
     }
