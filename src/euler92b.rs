@@ -19,6 +19,7 @@ pub fn main() {
     numbers[1] = 1;
     numbers[89] = 89;
     for i in 2..MAX {
+        if numbers[i] != 0 { continue }
         numbers[i] = fill(&mut numbers, i);
     }
     println!("{}", numbers.iter().filter(|&n| *n == 89).count());
