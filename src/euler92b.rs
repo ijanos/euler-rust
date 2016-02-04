@@ -1,14 +1,13 @@
 const MAX: usize = 10_000_000;
 
+const SQUARE: [usize; 10] = [0, 1, 4, 9, 16, 25, 36, 49,  64, 81];
+
 fn fill(array: &mut Vec<u8>, index: usize) -> u8 {
     let next = index
                 .to_string()
                 .chars()
-                .map(|c| {
-                    let n = c.to_digit(10).unwrap();
-                    n*n
-                 })
-                 .fold(0, |acc, n| acc + n) as usize;
+                .map(|c| SQUARE[c.to_digit(10).unwrap() as usize] )
+                .fold(0, |acc, n| acc + n);
     if array[next] == 0 {
         array[next] = fill(array, next);
     }
