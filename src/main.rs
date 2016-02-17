@@ -1,4 +1,6 @@
+extern crate itertools;
 extern crate num;
+
 use std::env;
 
 mod euler1;
