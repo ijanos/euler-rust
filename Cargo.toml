@@ -6,3 +6,4 @@ authors = ["János Illés <ijanos@gmail.com>"]
 [dependencies]
 num = "0.1"
 itertools = "0.4"
+permutohedron = "0.2"
