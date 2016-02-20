@@ -1,5 +1,6 @@
 extern crate itertools;
 extern crate num;
+extern crate permutohedron;
 
 use std::env;
 
@@ -18,6 +19,7 @@ mod euler14;
 mod euler15;
 mod euler20;
 mod euler22;
+mod euler43;
 mod euler46;
 mod euler48;
 mod euler49;
@@ -46,6 +48,7 @@ fn main() {
             "14" => euler14::main(),
             "15" => euler15::main(),
             "20" => euler20::main(),
+            "43" => euler43::main(),
             "46" => euler46::main(),
             "48" => euler48::main(),
             "49" => euler49::main(),
