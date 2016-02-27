@@ -6,7 +6,9 @@ pub fn main() {
     let mut primesums = Vec::new();
     for p in primes() {
         sum += p;
-        if sum > 1_000_000 { break };
+        if sum > 1_000_000 {
+            break;
+        };
         primesums.push(sum);
     }
     let mut max = 0;

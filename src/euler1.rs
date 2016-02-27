@@ -9,20 +9,21 @@ fn problem1a() {
 }
 
 fn problem1b() {
-    println!("{}", (1..1000)
-            .filter(|n| n % 3 == 0 || n % 5 == 0)
-            .fold(0, |sum, i| sum + i)
-    );
+    println!("{}",
+             (1..1000)
+                 .filter(|n| n % 3 == 0 || n % 5 == 0)
+                 .fold(0, |sum, i| sum + i));
 }
 
 fn problem1c() {
-   println!("{}",
-       (1..1000)
-        .fold(0, |sum, i| {
-                if i % 3 == 0 || i % 5 == 0 { sum + i } else { sum }
-            }
-       )
-   );
+    println!("{}",
+             (1..1000).fold(0, |sum, i| {
+                 if i % 3 == 0 || i % 5 == 0 {
+                     sum + i
+                 } else {
+                     sum
+                 }
+             }));
 }
 
 pub fn main() {

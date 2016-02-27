@@ -7,7 +7,8 @@ fn is_seq(triplet: &Vec<&u32>) -> bool {
 }
 
 pub fn main() {
-    let primes_from1000 = (1000..).filter(|&n| (2..(n as f32).sqrt() as u32 + 1).all(|i| n % i != 0));
+    let primes_from1000 = (1000..)
+                              .filter(|&n| (2..(n as f32).sqrt() as u32 + 1).all(|i| n % i != 0));
     let mut permutations = HashMap::<String, Vec<u32>>::new();
 
     for p in primes_from1000.take_while(|&n| n < 10_000) {
@@ -20,9 +21,11 @@ pub fn main() {
 
     let mut res = Vec::new();
     for v in permutations.values().filter(|&v| v.len() > 2) {
-        let r = v.iter().combinations_n(3)
+        let r = v.iter()
+                 .combinations_n(3)
                  .filter(|c| is_seq(c))
-                 .flatten().collect::<Vec<_>>();
+                 .flatten()
+                 .collect::<Vec<_>>();
         if !r.is_empty() {
             res.push(r);
         }

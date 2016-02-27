@@ -1,6 +1,6 @@
 struct Fib {
-   curr: u32,
-   next: u32
+    curr: u32,
+    next: u32,
 }
 
 impl Iterator for Fib {
@@ -16,9 +16,9 @@ impl Iterator for Fib {
 }
 
 pub fn main() {
-    let fib = Fib {curr: 1, next: 1};
-    println!("{}", fib
-            .take_while(|&a| a < 4_000_000)
-            .filter(|&a| a % 2 == 0)
-            .fold(0, |sum, i| sum + i));
+    let fib = Fib { curr: 1, next: 1 };
+    println!("{}",
+             fib.take_while(|&a| a < 4_000_000)
+                .filter(|&a| a % 2 == 0)
+                .fold(0, |sum, i| sum + i));
 }

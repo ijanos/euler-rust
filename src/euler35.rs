@@ -1,7 +1,7 @@
 use std::collections::VecDeque;
 use std::iter::FromIterator;
 
-fn  array2num(numbers: Vec<u32>) -> u64 {
+fn array2num(numbers: Vec<u32>) -> u64 {
     numbers.iter()
            .rev()
            .enumerate()
@@ -11,15 +11,15 @@ fn  array2num(numbers: Vec<u32>) -> u64 {
 #[derive(Clone)]
 struct Rotator<T: Clone> {
     queue: VecDeque<T>,
-    rotations: usize
+    rotations: usize,
 }
 
 impl<T: Clone> Rotator<T> {
     fn new(v: Vec<T>) -> Rotator<T> {
         let rot = v.len();
-        Rotator{
+        Rotator {
             queue: VecDeque::from_iter(v.into_iter()),
-            rotations: rot
+            rotations: rot,
         }
     }
 }
@@ -40,8 +40,9 @@ impl<T: Clone> Iterator for Rotator<T> {
 
 
 pub fn main() {
-    let primes = (2 as u64..).filter(|&n| (2..(n as f32).sqrt() as u32 + 1).all(|i| n % i as u64 != 0));
-    let primes_below1m = primes.take_while(|&n| n <  1_000_000).collect::<Vec<_>>();
+    let primes = (2 as u64..)
+                     .filter(|&n| (2..(n as f32).sqrt() as u32 + 1).all(|i| n % i as u64 != 0));
+    let primes_below1m = primes.take_while(|&n| n < 1_000_000).collect::<Vec<_>>();
     let banned = ['0', '2', '4', '5', '6', '8'];
     let validrotates = |n: &u64| {
         let chars = n.to_string().chars().collect::<Vec<_>>();
@@ -49,7 +50,9 @@ pub fn main() {
             return false;
         }
         let rotations = Rotator::new(chars);
-        rotations.map(|r| array2num(r.iter().map(|&c| c.to_digit(10).unwrap()).collect::<Vec<u32>>()))
+        rotations.map(|r| {
+                     array2num(r.iter().map(|&c| c.to_digit(10).unwrap()).collect::<Vec<u32>>())
+                 })
                  .all(|p| primes_below1m.contains(&p))
     };
     let ans = primes_below1m.iter().filter(|&p| validrotates(p)).count();

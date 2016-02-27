@@ -65,7 +65,7 @@ fn main() {
             "52" => euler52::main(),
             "92" => euler92::main(),
             "92b" => euler92b::main(),
-            _ => println!("Hasn't solved yet")
+            _ => println!("Hasn't solved yet"),
         }
     }
 }

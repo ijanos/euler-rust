@@ -5,8 +5,8 @@ pub fn main() {
     let mut max = 0;
     for p in primes.take_while(|&p| p <= 7654321) {
         let s = p.to_string();
-        if (1..s.len()+1).all(|n|
-                s.chars().any(|p| p == char::from_digit(n as u32, 10).unwrap())) {
+        if (1..s.len() + 1)
+               .all(|n| s.chars().any(|p| p == char::from_digit(n as u32, 10).unwrap())) {
             if p > max {
                 max = p;
             }

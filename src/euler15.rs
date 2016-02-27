@@ -13,13 +13,13 @@ pub fn main() {
 
     // initialize first row and column to 1s
     lattice[0] = [1; 21];
-    for y in 0..21  {
+    for y in 0..21 {
         lattice[y][0] = 1;
     }
 
     for x in 1..21 {
         for y in 1..21 {
-            lattice[x][y] = lattice[x-1][y] + lattice[x][y-1];
+            lattice[x][y] = lattice[x - 1][y] + lattice[x][y - 1];
         }
     }
     println!("{}", lattice[20][20]);
