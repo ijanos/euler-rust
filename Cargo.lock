@@ -2,14 +2,14 @@
 name = "euler-rust"
 version = "0.1.0"
 dependencies = [
- "itertools 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "itertools 0.4.10 (registry+https://github.com/rust-lang/crates.io-index)",
  "num 0.1.31 (registry+https://github.com/rust-lang/crates.io-index)",
  "permutohedron 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "itertools"
-version = "0.4.8"
+version = "0.4.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
