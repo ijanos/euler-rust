@@ -36,5 +36,5 @@ pub fn main() {
         }
         numbers[i] = fill(&mut numbers, i);
     }
-    println!("{}", numbers.iter().filter(|&n| *n == 89).count());
+    println!("{}", numbers.iter().filter(|&&n| n == 89).count());
 }
