@@ -21,7 +21,7 @@ pub fn main() {
     let mut vec: Vec<_> = edges.iter().collect();
     vec.sort_by_key(|&(_, set)| set.len());
     let mut ans = vec.iter().rev().map(|&(&n, _)| n).collect::<String>();
-    let (_ ,last) = vec[0];
+    let (_, last) = vec[0];
     for &c in last {
         ans.push(c);
     }
