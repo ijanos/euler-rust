@@ -5,6 +5,7 @@ use std::collections::HashSet;
 
 
 pub fn main() {
+    println!("Pipe the puzzle input to stdin");
     let mut edges = HashMap::<char, HashSet<char>>::new();
     let stdin = io::stdin();
     for line in stdin.lock().lines() {
