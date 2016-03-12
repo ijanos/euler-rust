@@ -1,4 +1,4 @@
-fn factsum(n: u32) -> u32 {
+fn factsum(n: usize) -> usize {
     n.to_string()
      .chars()
      .map(|c| {
@@ -19,32 +19,28 @@ fn factsum(n: u32) -> u32 {
      .fold(0, |x, acc| acc + x)
 }
 
-fn fill(cache: &mut Vec<u32>, i: u32) -> u32 {
-    let mut length = 1;
+fn fill(cache: &mut Vec<usize>, i: usize) -> usize {
     let mut chain = vec![i];
     let mut next = i;
     loop {
         next = factsum(next);
         if chain.contains(&next) {
-            break;
-        } else if cache.len() > next as usize && cache[next as usize] != 0 {
-            length += cache[next as usize];
-            break;
+            return chain.len();
+        } else if cache.len() > next && cache[next] != 0 {
+            return chain.len() + cache[next];
         } else {
             chain.push(next);
-            length += 1;
         }
     }
-    length
 }
 
 pub fn main() {
-    const MAX: u32 = 1_000_000;
-    let mut cache = vec![0; MAX as usize];
+    const MAX: usize = 1_000_000;
+    let mut cache: Vec<usize> = vec![0; MAX];
     let mut count = 0;
     for i in 0..MAX {
         let chainlength = fill(&mut cache, i);
-        cache[i as usize] = chainlength;
+        cache[i] = chainlength;
         if chainlength == 60 {
             count += 1;
         }
