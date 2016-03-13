@@ -19,6 +19,7 @@ mod euler14;
 mod euler15;
 mod euler20;
 mod euler22;
+mod euler30;
 mod euler35;
 mod euler36;
 mod euler37;
