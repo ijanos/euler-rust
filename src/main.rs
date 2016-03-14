@@ -57,6 +57,7 @@ fn main() {
             "14" => euler14::main(),
             "15" => euler15::main(),
             "20" => euler20::main(),
+            "30" => euler30::main(),
             "35" => euler35::main(),
             "36" => euler36::main(),
             "37" => euler37::main(),
