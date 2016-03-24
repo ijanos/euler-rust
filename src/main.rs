@@ -4,6 +4,8 @@ extern crate permutohedron;
 
 use std::env;
 
+mod common;
+
 mod euler1;
 mod euler2;
 mod euler3;
