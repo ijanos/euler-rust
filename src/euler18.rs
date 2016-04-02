@@ -32,7 +32,7 @@ pub fn main() {
     }
     let mut summed = expand(&lines[0]);
     for line in &lines[1..] {
-        summed = expand(&summed.iter().zip(line).map(|(x,y)| x + y).collect());
+        summed = expand(&summed.iter().zip(line).map(|(x, y)| x + y).collect());
     }
     println!("{}", summed.iter().max().unwrap());
 }
