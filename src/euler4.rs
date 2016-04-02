@@ -1,9 +1,5 @@
-// fn ispalindrome(n: u32) -> bool {
-//    let s = n.to_string();
-//    s == s.chars().rev().collect::<String>()
-// }
 
-fn ispalindrome(n: u32) -> bool {
+pub fn ispalindrome(n: u32) -> bool {
     let s = n.to_string();
     s.chars().zip(s.chars().rev()).all(|(x, y)| x == y)
 }

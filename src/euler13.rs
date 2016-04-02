@@ -1,4 +1,7 @@
-use common::array_to_num;
+pub fn array_to_num(numbers: &[char]) -> u64 {
+    numbers.iter().cloned().collect::<String>().parse().unwrap()
+}
+
 
 pub fn main() {
     let ans = INPUT.iter()

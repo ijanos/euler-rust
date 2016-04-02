@@ -1,4 +1,4 @@
-use common::digit_fact_sum;
+use euler34::digit_fact_sum;
 
 fn fill(cache: &mut Vec<usize>, i: usize) -> usize {
     let mut chain = vec![i];
