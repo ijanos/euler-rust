@@ -33,6 +33,7 @@ mod euler25;
 mod euler26;
 mod euler27;
 mod euler28;
+mod euler29;
 mod euler30;
 mod euler34;
 mod euler35;
@@ -88,6 +89,7 @@ fn main() {
             "26" => euler26::main(),
             "27" => euler27::main(),
             "28" => euler28::main(),
+            "29" => euler29::main(),
             "30" => euler30::main(),
             "34" => euler34::main(),
             "35" => euler35::main(),
