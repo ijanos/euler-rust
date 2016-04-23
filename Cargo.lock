@@ -2,15 +2,15 @@
 name = "euler-rust"
 version = "0.1.0"
 dependencies = [
- "chrono 0.2.21 (registry+https://github.com/rust-lang/crates.io-index)",
- "itertools 0.4.12 (registry+https://github.com/rust-lang/crates.io-index)",
+ "chrono 0.2.22 (registry+https://github.com/rust-lang/crates.io-index)",
+ "itertools 0.4.13 (registry+https://github.com/rust-lang/crates.io-index)",
  "num 0.1.32 (registry+https://github.com/rust-lang/crates.io-index)",
  "permutohedron 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "chrono"
-version = "0.2.21"
+version = "0.2.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "num 0.1.32 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -19,7 +19,7 @@ dependencies = [
 
 [[package]]
 name = "itertools"
-version = "0.4.12"
+version = "0.4.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
