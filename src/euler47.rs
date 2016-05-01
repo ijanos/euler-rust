@@ -16,7 +16,6 @@ fn factors_len(n: u32) -> usize {
     factors.len()
 }
 
-
 pub fn main() {
     let mut buf = VecDeque::new();
     buf.push_back((1, factors_len(1)));
@@ -26,12 +25,17 @@ pub fn main() {
     let mut i = 5;
     loop {
         buf.pop_front();
-        buf.push_back((i, factors_len(i)));
-        i += 1;
+        let factors = factors_len(i);
+        buf.push_back((i, factors));
         if buf.iter().all(|&(_, len)| len == 4) {
             println!("{}", buf[0].0);
             break;
         }
+        i += if factors != 4 {
+            4 // skip 4 numbers
+        } else {
+            1
+        };
     }
 
     // Alternative solution
