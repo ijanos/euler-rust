@@ -33,4 +33,8 @@ pub fn main() {
             break;
         }
     }
+
+    // Alternative solution
+    // let numbers = (1..200_000).collect::<Vec<_>>();
+    // println!("{:?}", numbers.windows(4).find(|&l| l.iter().all(|&n| factors_len(n) == 4)));
 }
