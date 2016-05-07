@@ -55,6 +55,7 @@ mod euler47;
 mod euler48;
 mod euler49;
 mod euler50;
+mod euler51;
 mod euler67;
 mod euler52;
 mod euler74;
@@ -118,6 +119,7 @@ fn main() {
             "48" => euler48::main(),
             "49" => euler49::main(),
             "50" => euler50::main(),
+            "51" => euler51::main(),
             "52" => euler52::main(),
             "67" => euler67::main(),
             "74" => euler74::main(),
