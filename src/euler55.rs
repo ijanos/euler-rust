@@ -13,7 +13,7 @@ fn is_lychrel(&n: &u64) -> bool {
     };
 
     let mut n = n.to_biguint().unwrap();
-    for i in 0..50 {
+    for _ in 0..50 {
         let m = reverse_add(&n);
         if is_palindrom(&m.to_string()) {
             return false;
