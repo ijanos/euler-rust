@@ -1,5 +1,5 @@
 pub fn main() {
-    let coin_sum = |a, b, c, d, e, f, g| 1 * a + 2 * b + 5 * c + 10 * d + 20 * e + 50 * f + 100 * g;
+    let coin_sum = |a, b, c, d, e, f, g| a + 2 * b + 5 * c + 10 * d + 20 * e + 50 * f + 100 * g;
     let mut ans = 0;
     for a in 0..201 {
         for b in 0..101 - a / 2 {
