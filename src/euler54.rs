@@ -140,7 +140,7 @@ impl PartialOrd for Hand {
                     return c1.rank.partial_cmp(&c2.rank);
                 }
             }
-            return Some(Ordering::Equal)
+            Some(Ordering::Equal)
         } else {
             self.rank.partial_cmp(&other.rank)
         }
