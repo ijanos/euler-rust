@@ -185,8 +185,6 @@ impl Hand {
             HandRank::FourOfAKind(r)
         } else if has_n(3) && has_n(2) {
             HandRank::FullHouse(highest_rank)
-        } else if is_flush {
-            HandRank::Flush(highest_rank)
         } else if is_straight {
             HandRank::Straight(highest_rank)
         } else if has_n(3) {
