@@ -12,11 +12,11 @@ pub fn main() {
         let line = line.unwrap();
         let numbers = line.chars().collect::<Vec<_>>();
         {
-            let set = edges.entry(numbers[0]).or_insert(HashSet::<char>::new());
+            let set = edges.entry(numbers[0]).or_insert_with(HashSet::<char>::new);
             set.insert(numbers[1]);
             set.insert(numbers[2]);
         }
-        let set = edges.entry(numbers[1]).or_insert(HashSet::<char>::new());
+        let set = edges.entry(numbers[1]).or_insert_with(HashSet::<char>::new);
         set.insert(numbers[2]);
     }
     let mut vec: Vec<_> = edges.iter().collect();
