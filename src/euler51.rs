@@ -12,10 +12,8 @@ fn prime_family_size(p: &str, mask: &[u8]) -> u32 {
                      p_i
                  })
                  .collect::<String>();
-        if isprime(&c.parse::<u64>().unwrap()) {
-            if c.chars().nth(0).unwrap() != '0' {
+        if isprime(&c.parse::<u64>().unwrap()) && c.chars().nth(0).unwrap() != '0' {
                 count += 1;
-            }
         }
     }
     count
