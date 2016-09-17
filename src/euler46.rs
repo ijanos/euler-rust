@@ -9,7 +9,7 @@ pub fn main() {
     let doublesquares = (1..).map(|x| 2 * (x * x)).take(1500).collect::<Vec<u32>>();
 
     for p in primes.take_while(|&v| v < MAX) {
-        for &s in doublesquares.iter() {
+        for s in &doublesquares {
             set.insert(p + s);
         }
     }
