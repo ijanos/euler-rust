@@ -13,7 +13,7 @@ pub fn main() {
     let stdin = io::stdin();
     for line in stdin.lock().lines() {
         let line = line.unwrap().replace("\"", "");
-        let names: Vec<&str> = line.split(",").collect();
+        let names: Vec<&str> = line.split(',').collect();
         println!("{}",
                  names.iter()
                       .map(|name| {
