@@ -3,8 +3,7 @@ pub fn digit_fact_sum(n: usize) -> usize {
      .chars()
      .map(|c| {
          match c {
-             '0' => 1,
-             '1' => 1,
+             '0' | '1' => 1,
              '2' => 2,
              '3' => 6,
              '4' => 24,
@@ -16,12 +15,12 @@ pub fn digit_fact_sum(n: usize) -> usize {
              _ => panic!(),
          }
      })
-     .fold(0, |sum, i| sum + i)
+     .sum()
 }
 
 pub fn main() {
-    let ans = (3..1_000_000)
+    let ans: usize = (3..1_000_000)
                   .filter(|&i| i == digit_fact_sum(i))
-                  .fold(0, |sum, i| sum + i);
+                  .sum();
     println!("{}", ans);
 }
