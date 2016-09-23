@@ -15,7 +15,7 @@ pub fn main() {
         let mut numbers = p.to_string().chars().collect::<Vec<char>>();
         numbers.sort();
         let key = numbers.into_iter().collect::<String>();
-        let mut v = permutations.entry(key).or_insert(Vec::new());
+        let mut v = permutations.entry(key).or_insert_with(Vec::new);
         v.push(p)
     }
 
